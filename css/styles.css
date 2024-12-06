@@ -162,14 +162,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    grid-auto-rows: auto; /* Ensure rows adjust to the image height */
-    margin-bottom: 40px;
+    grid-auto-rows: minmax(min-content, auto); /* Adjust row height based on content */
+    margin-bottom: 20px;
 }
 
 /* Each Work Item */
 .work-item {
+    /* border: 1px solid; */
     position: relative;
-    overflow: hidden; /* Ensure no extra space under the image */
+    overflow: hidden;
+    display: block;  /* Ensure no extra space under the image */
 }
 
 .work-item:hover {
@@ -185,7 +187,7 @@
 
 /* Special Class for First Long Image (Spans 2 Rows) */
 .work-item.long {
-    grid-row: span 2;
+    grid-row: span 2; /* This makes the first item stretch over two rows */
 }
 
 /* Show More Button */
@@ -208,12 +210,168 @@
 /* Responsive Layout */
 @media (max-width: 768px) {
     .work-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
     }
 }
 
 @media (max-width: 480px) {
     .work-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 column on mobile devices */
+    }
+}
+
+/* Brands */
+
+.Brands-main{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto ;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: calc(20% - 20px); /* Adjust for 5 images in a row */
+    max-width: 180px; /* Optional for maximum size */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Adds hover effect */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: calc(33.33% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: calc(50% - 20px); /* Adjust for smaller devices */
+    }
+}
+
+/* About */
+.title-part{
+    justify-content:left;
+}
+
+.about-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-section .intro-text {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+ 
+}
+
+.team-member, .about-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.team-member .image-box {
+    height: 200px;
+    background-color: #e6e6e6;
+}
+
+.team-member .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member .info-box {
+    padding: 15px;
+    background-color: #ffeb3b;
+    text-align: center;
+}
+
+.team-member .info-box strong {
+    font-size: 1rem;
+    display: block;
+    color: #333;
+}
+
+.team-member .info-box p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.about-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.about-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-info p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.about-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member, .about-info {
+        max-width: 100%;
     }
 }
