@@ -387,14 +387,14 @@
 
 .contact-section {
     text-align: center;
-    padding: 40px 20px;
-    max-width: 1200px;
+    padding:0 13%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .contact-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 1000;
     margin-bottom: 10px;
 }
 
@@ -406,10 +406,19 @@
 
 .contact-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+    
+   
+}
+.contact-heading{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
 }
 
 .contact-form {
@@ -439,6 +448,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 0.9rem;
+    background-color: #eaeaea;
+    font-weight: 500;
 }
 
 .contact-form button {
@@ -476,6 +487,14 @@
     font-size: 1.2rem;
 }
 
+.contact-image img {
+    margin-top: 10%;
+    width: 100%;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .social-links {
     margin-top: 40px;
 }
@@ -500,5 +519,60 @@
 
     .contact-form, .contact-image {
         max-width: 100%;
+    }
+}
+
+/* Footer */
+
+
+.footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.back-to-top {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .back-to-top {
+        margin-top: 10px;
     }
 }
