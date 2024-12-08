@@ -10,12 +10,13 @@
     <title>Creative Digital Agency</title>
   </head>
   <body>
+    <!-- Header Section -->
     <header class="hero-section">
       <nav class="navbar">
         <div class="logo">
           <img src="assets/Main-Logo.png" alt="Logo" />
         </div>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger">&#9776;</div>
         <ul class="nav-links">
           <li><a href="#work">WORK</a></li>
           <li><a href="#about">ABOUT</a></li>
@@ -23,7 +24,8 @@
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-
+    </header>
+    <section>
       <div class="hero-content">
         <div class="text-content">
           <h1>
@@ -35,50 +37,47 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="btn">Send Message</button>
+          <button class="btn">SEND MESSAGE</button>
         </div>
         <div class="image-content">
           <img src="assets/Image-1.png" alt="" />
         </div>
       </div>
-    </header>
+    </section>
 
-    <section class="work-showcase">
+    <!-- WorkShowCase Section -->
+    <section class="work-showcase" id="work">
       <h2 class="section-title">WORK SHOWCASE.</h2>
       <div class="grid-container">
-        <!-- First item (long image) -->
-        <div class="work-item">
-          <div class="item artwork">
-            <h3>ARTWORK</h3>
-            <p>BRANDING</p>
-          </div>
+        <div class="item artwork">
+          <h3>ARTWORK</h3>
+          <p>BRANDING</p>
         </div>
-
         <!-- Other items -->
         <img src="assets/Image-2.jpg" class="item image2" alt="" />
         <img src="assets/Image-3.jpg" class="item image3" alt="" />
-        <img src="assets/Image-4.jpg" class="item image4" alt="" /> <img src="assets/Image-5.jpg" class="item image5" alt="" />
+        <img src="assets/Image-4.jpg" class="item image4" alt="" />
+        <img src="assets/Image-5.jpg" class="item image5" alt="" />
         <img src="assets/Image-6.jpg" class="item image6" alt="" />
-       
       </div>
       <div class="show-button">
         <button class="show-more-btn">SHOW ME MORE</button>
       </div>
-     
     </section>
 
-    <section class="Brands-main">
+    <section class="Brands-main" id="about">
       <div class="logo-container">
         <img src="assets/Logo-1.png" alt="Logo 1" class="logo" />
         <img src="assets/Logo-2.png" alt="Logo 2" class="logo" />
         <img src="assets/Logo-3.png" alt="Logo 3" class="logo" />
         <img src="assets/Logo-5.png" alt="Logo 5" class="logo" />
         <img src="assets/Logo-4.png" alt="Logo 4" class="logo" />
-        
       </div>
     </section>
 
-    <section class="about-section">
+    <!-- About Section -->
+
+    <section class="about-section" id="about">
       <div class="title-part">
         <h1>ABOUT US.</h1>
         <p class="intro-text">
@@ -117,7 +116,9 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Section -->
+
+    <section class="contact-section" id="contact">
       <div class="contact-heading">
         <h1>CONTACT US.</h1>
         <p class="intro-text">
@@ -129,7 +130,6 @@
         <div class="contact-form">
           <h2>Send Us Message.</h2>
           <form action="#" method="post">
-
             <input
               type="text"
               id="name"
@@ -137,7 +137,6 @@
               placeholder="Name"
               required
             />
-
 
             <input
               type="email"
@@ -147,7 +146,6 @@
               required
             />
 
-
             <textarea
               id="message"
               name="message"
@@ -155,8 +153,9 @@
               rows="5"
               required
             ></textarea>
-
-            <button type="submit">SEND MESSAGE</button>
+            <div class="contact-btn">
+              <button type="submit">SEND MESSAGE</button>
+            </div>
           </form>
         </div>
         <div class="contact-image">
@@ -180,6 +179,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer Section -->
 
     <footer class="footer">
       <div class="footer-content">
