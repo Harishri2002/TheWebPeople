@@ -375,7 +375,7 @@ html {
 
 /* About */
 .title-part {
-  width: 70%;
+  width: 60%;
   justify-content: left;
 }
 
@@ -391,7 +391,8 @@ html {
 }
 
 .about-section .intro-text {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding: 5% 0;
   font-weight: 800;
   margin-bottom: 40px;
   color: #000000;
